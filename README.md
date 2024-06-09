@@ -22,3 +22,8 @@ To run the Flask web application locally, follow these steps(make sure to have f
     • Once the Flask application is running, you can use the web interface to input data for predicting salaries of data professionals.
     • Enter the required information such as job role, experience, age, and ratings, then click the "Predict" button to see the predicted salary.
     • The application will display the predicted salary based on the input provided.
+
+
+# mentorness_ml_2
+Internship track
+# Fast Tag Fraud Detection(in progress)
