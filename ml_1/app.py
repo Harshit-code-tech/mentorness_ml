@@ -5,7 +5,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load the trained pipeline
-model = joblib.load('/home/hgidea/Desktop/Coding/Python/internship/mentorness/salary_prediction_pipeline_lr.pkl')
+model = joblib.load('salary_prediction_pipeline_lr.pkl')
 
 
 @app.route('/')
