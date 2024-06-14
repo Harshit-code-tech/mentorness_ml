@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 
 # Load the model
-with open('/home/hgidea/Desktop/Coding/Python/internship/mentorness/ml_2/SVM_Fast_best.pkl', 'rb') as f:
+with open('SVM_Fast_best.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Define feature columns
@@ -24,7 +24,7 @@ transaction_amount = st.number_input('Transaction Amount', min_value=0.0, format
 amount_paid = st.number_input('Amount Paid', min_value=0.0, format="%.2f")
 vehicle_type = st.selectbox('Vehicle Type', ['Bus ','Car' ,'Truck', 'Van' ,'Sedan' ,'SUV' ,'Motorcycle'])
 tollbooth_id = st.text_input('TollBooth ID')
-lane_type = st.selectbox('Lane Type', ['Regular', 'VIP', 'Emergency'])
+lane_type = st.selectbox('Lane Type', ['Regular', 'Express'])
 vehicle_dimensions = st.selectbox('Vehicle Dimensions', ['Small', 'Medium', 'Large'])
 geographical_location = st.text_input('Geographical Location')
 month = st.number_input('Month', min_value=1, max_value=12)
