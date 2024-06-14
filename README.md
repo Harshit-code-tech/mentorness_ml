@@ -26,4 +26,68 @@ To run the Flask web application locally, follow these steps(make sure to have f
 
 # mentorness_ml_2
 Internship track
-# Fast Tag Fraud Detection(in progress)
+# Fast Tag Fraud Detection
+Welcome to the Fastag Fraud Detection System project! This project tackles the challenge of identifying fraudulent activities within the Fastag toll payment system in India.
+
+Our goal is to develop a robust system that can analyze real-world Fastag transaction data and accurately classify transactions as either legitimate or fraudulent.
+
+
+
+# File Structure
+
+    *requirements.txt        # Text file containing required Python libraries
+    *mentorness_ml_2_final.ipynb  # Jupyter notebook containing EDA, feature engineering, model development, and evaluation
+    *app.py                   # Python script for the Streamlit web application for real-time fraud prediction
+    *svm_fast_best.pkl       # Pickled model file containing the best performing SVM model
+    *svm_fast.pkl            # Pickled model file containing a trained SVM model
+    *FastagFraudDetection.csv  # CSV file containing the fastag transaction data
+# Project Overview
+    *Data Exploration and Preprocessing (mentorness_ml_2_final.ipynb):
+
+Loads the Fastag fraud detection dataset (FastagFraudDetection.csv).
+Performs exploratory data analysis (EDA) to understand the data distribution, identify missing values, and analyze relationships between features.
+Preprocesses the data by handling missing values, encoding categorical features, and feature engineering (e.g., extracting time-based features).
+Splits the data into training and testing sets.
+
+    *Model Development and Evaluation (mentorness_ml_2_final.ipynb):
+
+Implements and trains various machine learning models like Decision Tree, Random Forest, AdaBoost, XGBoost, KNN, and SVM for fraud classification.
+Performs hyperparameter tuning using GridSearchCV to find the best performing model configuration for each algorithm.
+Evaluates the models using metrics like accuracy, precision, recall, F1-score, and ROC AUC curve.
+Selects the best performing model based on evaluation metrics.
+
+    *Model Deployment (app.py):
+
+Creates a Streamlit web application (app.py) for real-time fraud prediction.
+Loads the best performing model saved as a pickle file (svm_fast_best.pkl).
+Defines the features used for model prediction.
+Provides a user interface where users can input transaction details.
+Uses the loaded model to predict whether a transaction is fraudulent based on the user input.
+Displays the predicted fraud probability or classification.
+
+# Requirements
+The project requires the following Python libraries:
+
+    pandas
+    scikit-learn
+    streamlit
+    pickle
+You can install these libraries using the pip command:
+
+# Bash
+
+    *pip install pandas scikit-learn streamlit pickle
+    
+
+# How to Use
+Clone this repository to your local machine.
+Install the required libraries using the command mentioned above.
+1.Run the Jupyter notebook (mentorness_ml_2_final.ipynb) to explore the data, train the models, and evaluate their performance.
+2.Run the Streamlit application (app.py) using the command:
+# Bash
+    streamlit run app.py
+
+This will launch the Streamlit app in your web browser, allowing you to interact with the fraud prediction model.
+
+# Note
+The Jupyter notebook (mentorness_ml_2_final.ipynb) assumes the project files are located in the same directory as the notebook. The file paths for data loading and model saving might need adjustments depending on your specific setup.
